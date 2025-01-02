@@ -1,6 +1,6 @@
-# utils
+# gh-branch-protector
 
-Handy utilities serving different purposes.
+GitHub CLI utility to protect GitHub branches.
 
 ## protect-branch script
 
@@ -13,6 +13,11 @@ Usage: protect-branch -o OWNER -r REPO -b BRANCH
 Options:
   -o OWNER    GitHub owner (user or organization)
   -r REPO     Repository name
-  -b BRANCH   Branch name to protect
   -h          Show this help message
 ```
+
+## TODO
+
+[] -b BRANCH option to specify the name of the branch
+[] Update an existing ruleset
+

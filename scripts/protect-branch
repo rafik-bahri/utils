@@ -26,11 +26,11 @@ while getopts "o:r:b:h" opt; do
     esac
 done
 
-REQUEST_URI="repos/${OWNER}/${REPO}/branches/${BRANCH}/protection"
+REQUEST_URI="/repos/$OWNER/$REPO/rulesets"
 CONFIG="config/protect-branch.json"
 
-# protect branch
-gh api --method PUT ${REQUEST_URI} --input ${CONFIG}
+# create rule set to protect branch
+gh api --method POST ${REQUEST_URI} --input ${CONFIG}
 
 # verify 
 gh api ${REQUEST_URI}
